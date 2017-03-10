@@ -20,14 +20,14 @@ import java.util.Map;
 public class ImportOSMFile {
 
     public static void main(String[] args) throws IOException, XMLStreamException {
-        File dbPath = new File("Users/zhzy/Documents/Neo4j/osmmm");
-        String osmPath = "/Users/zhzy/Downloads/data/";
+        File dbPath = new File("/home/zhzy/Documents/Neo4j/osm");
         OSMImporter importer = new OSMImporter("sweden");
         Map<String, String> config = new HashMap<String, String>();
         config.put("neostore.nodestore.db.mapped_memory", "90M" );
         config.put("dump_configuration", "true");
         BatchInserter batchInserter = BatchInserters.inserter(dbPath, config);
-        importer.importFile(batchInserter, "/Users/zhzy/Downloads/data/one-street.osm", false);
+        importer.importFile(batchInserter, "/home/zhzy/Downloads/data/map.osm", false);
+        batchInserter.shutdown();
         GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabase(dbPath);
         importer.reIndex(db, 10000);
         db.shutdown();

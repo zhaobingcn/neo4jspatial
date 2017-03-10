@@ -16,6 +16,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.0</version>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
@@ -24,12 +29,17 @@
     <dependency>
       <groupId>org.neo4j</groupId>
       <artifactId>neo4j</artifactId>
-      <version>3.0.4</version>
+      <version>3.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.neo4j</groupId>
       <artifactId>neo4j-spatial</artifactId>
       <version>3.0.4RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>cql</artifactId>
+      <version>2.6.3</version>
     </dependency>
   </dependencies>
   <build>
