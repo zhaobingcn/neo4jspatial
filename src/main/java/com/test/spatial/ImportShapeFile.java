@@ -18,7 +18,7 @@ public class ImportShapeFile {
 
         try (Transaction tx = database.beginTx()) {
             ShapefileImporter importer = new ShapefileImporter(database);
-            importer.importFile("/Users/zhzy/Downloads/data/roa_4m.shp", "continent");
+            importer.importFile("/Users/zhzy/Downloads/data/highway.shp", "continent");
             tx.success();
         } finally {
             database.shutdown();
