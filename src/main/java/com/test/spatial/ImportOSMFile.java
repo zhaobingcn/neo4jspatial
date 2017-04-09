@@ -21,7 +21,7 @@ public class ImportOSMFile {
 
     public static void main(String[] args) throws IOException, XMLStreamException {
         File dbPath = new File("/home/zhzy/Documents/Neo4j/osm");
-        OSMImporter importer = new OSMImporter("sweden");
+        OSMImporter importer = new OSMImporter("map");
         Map<String, String> config = new HashMap<String, String>();
         config.put("neostore.nodestore.db.mapped_memory", "90M" );
         config.put("dump_configuration", "true");
